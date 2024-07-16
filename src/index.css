@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.home-container {
+  @apply bg-cover bg-center bg-no-repeat h-full w-full relative;
+  background-image: url('/weather.jpg');
+}
+
+.searchbar-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #black;
+  z-index: 10
+}

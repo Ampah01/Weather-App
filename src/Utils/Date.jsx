@@ -1,0 +1,37 @@
+import { useEffect, useState } from "react";
+
+ const useDate = () => {
+  const locale = "en";
+  const [today, setToday] = useState(new Date());
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setToday(new Date());
+    }, 60 * 1000);
+
+    return () => {
+      clearInterval(timer);
+    };
+  }, []);
+
+  const day = today.toLocaleDateString(locale, { weekday: "long" });
+
+  const date = `${day}, ${today.getDate()}, ${today.toLocaleDateString(locale, {
+    month: "long",
+  })}\n\n`;
+
+  const time =`${day}, ${today.getDate()}, ${today.toLocaleDateString(locale, {
+    month: "long",
+    hour: "numeric",
+    hour12: true,
+    minute: "numeric",
+   
+  })};`
+  
+  return {
+    date,
+    time,
+  };
+};
+
+export default useDate;

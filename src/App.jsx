@@ -1,14 +1,13 @@
-import React from 'react'
-
-import './App.css'
+import React from "react";
+import "./App.css";
+import Home from "./Page/Home";
 
 function App() {
-
   return (
-    <>
-    <h2>Hello World</h2>
-    </>
-  )
+    <div>
+      <Home />
+    </div>
+  );
 }
 
-export default App
+export default App;
