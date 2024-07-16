@@ -13,7 +13,7 @@ const Searchbar = ({ inputChange }) => {
 
   return (
     <div className="relative z-10 flex items-center justify-center ">
-      <div className="w-full rounded-lg min-w-lg bg-white/30 backdrop-blur-lg border-opacity-30">
+      <div className="w-full max-w-xl rounded-lg bg-white/30 backdrop-blur-lg border-opacity-30">
         <AsyncPaginate
           className="searchbar-input"
           placeholder="Search for cities"
