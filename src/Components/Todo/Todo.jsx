@@ -42,18 +42,18 @@ function Todo() {
   }
 
   return (
-    <div className="max-w-3xl p-4 mx-auto mt-10 border border-white rounded-lg shadow-md bg-white/30 backdrop-blur-lg border-opacity-30">
-      <h1 className="text-2xl font-bold mb-4 text-slate-100">TODO-LIST</h1>
+    <div className="max-w-2xl px-4 py-2 mx-auto mt-10 border border-white rounded-lg shadow-md bg-white/30 backdrop-blur-lg border-opacity-30">
+      <h1 className="text-xl font-semibold mb-4 text-slate-100">TODO-LIST</h1>
       <div className="first-container flex mb-4">
         <input
           type="text"
-          className="input-todo flex-grow px-2 py-2 mr-2 rounded border-2 border-white bg-white outline-none text-gray-800 placeholder-gray-500"
+          className="input-todo flex-grow px-2 py-1 mr-2 rounded border-2 border-white bg-white outline-none text-gray-800 placeholder-gray-500"
           value={task}
           placeholder="Enter to-do here..."
           onChange={handleInput}
         />
         <button
-          className="add-button button px-4 py-2 bg-blue-500 hover:bg-blue-600 rounded text-white"
+          className="add-button button px-4 py-1 bg-blue-500 hover:bg-blue-600 rounded text-white"
           onClick={handleAddTask}
         >
           Add
@@ -63,7 +63,7 @@ function Todo() {
         {todos.map((todo, index) => (
           <li
             key={index}
-            className="todo-list mb-2 flex items-center justify-between bg-white text-gray-800 p-2 rounded"
+            className="todo-list mb-4 flex items-center justify-between bg-white text-gray-800 px-2 py-1 rounded"
           >
             <span className="task">{todo}</span>
             <div className="buttons flex space-x-2">

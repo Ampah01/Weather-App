@@ -35,7 +35,7 @@ const Home = () => {
 
   return (
     <div className="flex flex-col-reverse md:flex-row ">
-      <div className="w-full lg:w-2/4 p-4 bg-transparent rounded-md shadow-lg">
+      <div className="w-full lg:w-2/4 px-4  bg-transparent rounded-md shadow-lg">
         <Todo />
       </div>
       <div className="w-full  px-4 py-8 home-container ">
