@@ -42,7 +42,7 @@ function Todo() {
   }
 
   return (
-    <div className="max-w-2xl px-4 py-2 mx-auto mt-10 border border-white rounded-lg shadow-md bg-white/30 backdrop-blur-lg border-opacity-30">
+    <div className="max-w-2xl px-4 py-2 mx-auto mt-10 border border-white rounded-lg shadow-md bg-white/30 backdrop-blur-lg border-opacity-30 mb-10">
       <h1 className="text-xl font-semibold mb-4 text-slate-100">TODO-LIST</h1>
       <div className="first-container flex mb-4">
         <input
