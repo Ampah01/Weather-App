@@ -3,6 +3,7 @@ import Searchbar from "../Components/Searchbar/Searchbar";
 import CurrentWeather from "../Components/CurrentWeather/CurrentWeather";
 import { fetchWeatherData, fetchForecast } from "../Service/api";
 import Forecast from "../Components/Forecast/Forecast";
+import Todo from "../Components/Todo/Todo";
 
 const Home = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -37,6 +38,7 @@ const Home = () => {
       <Searchbar inputChange={handleInputChange} />
       {weatherData && <CurrentWeather weather={weatherData} />}
       {forecastData && <Forecast forecast={forecastData} />}
+      <Todo />
     </div>
   );
 };
