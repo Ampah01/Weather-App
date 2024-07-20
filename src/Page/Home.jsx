@@ -34,11 +34,15 @@ const Home = () => {
   console.log(forecastData);
 
   return (
-    <div className="w-full min-h-screen px-4 py-8 home-container ">
-      <Searchbar inputChange={handleInputChange} />
-      {weatherData && <CurrentWeather weather={weatherData} />}
-      {forecastData && <Forecast forecast={forecastData} />}
-      <Todo />
+    <div className="flex flex-col-reverse md:flex-row ">
+      <div className="w-full lg:w-2/4 p-4 bg-transparent rounded-md shadow-lg">
+        <Todo />
+      </div>
+      <div className="w-full  px-4 py-8 home-container ">
+        <Searchbar inputChange={handleInputChange} />
+        {weatherData && <CurrentWeather weather={weatherData} />}
+        {forecastData && <Forecast forecast={forecastData} />}
+      </div>
     </div>
   );
 };

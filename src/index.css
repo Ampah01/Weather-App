@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.home-container {
-  @apply bg-cover bg-center bg-no-repeat h-full w-full relative;
+.main-container {
+  @apply bg-cover bg-center bg-no-repeat min-h-screen w-full relative;
   background-image: url('/weather.jpg');
 }
 
