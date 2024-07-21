@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function Todo() {
   const [todos, setTodos] = useState([]);
   const [task, setTask] = useState("");
 
+ 
+  useEffect(() => {
+    const storedTodos = JSON.parse(localStorage.getItem("todos"));
+    if (storedTodos) {
+      setTodos(storedTodos);
+    }
+  }, []);
+
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
+
   function handleInput(event) {
-    setTask(event.target.value);
+    const inputValue = event.target.value
+    setTask(inputValue);
   }
 
   function handleAddTask() {
